@@ -1,0 +1,732 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Sumon Rahman">
+    <meta name="description" content>
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Appy Mobile App</title>
+
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/ico" href="images/about-logo.png" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css//linearicons.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script nonce="fdcf4b89-0f3c-48be-ae3f-343ba6fc1fe1">
+        (function(w, d) {
+            ! function(bg, bh, bi, bj) {
+                bg[bi] = bg[bi] || {};
+                bg[bi].executed = [];
+                bg.zaraz = {
+                    deferred: [],
+                    listeners: []
+                };
+                bg.zaraz.q = [];
+                bg.zaraz._f = function(bk) {
+                    return async function() {
+                        var bl = Array.prototype.slice.call(arguments);
+                        bg.zaraz.q.push({
+                            m: bk,
+                            a: bl
+                        })
+                    }
+                };
+                for (const bm of ["track", "set", "debug"]) bg.zaraz[bm] = bg.zaraz._f(bm);
+                bg.zaraz.init = () => {
+                    var bn = bh.getElementsByTagName(bj)[0],
+                        bo = bh.createElement(bj),
+                        bp = bh.getElementsByTagName("title")[0];
+                    bp && (bg[bi].t = bh.getElementsByTagName("title")[0].text);
+                    bg[bi].x = Math.random();
+                    bg[bi].w = bg.screen.width;
+                    bg[bi].h = bg.screen.height;
+                    bg[bi].j = bg.innerHeight;
+                    bg[bi].e = bg.innerWidth;
+                    bg[bi].l = bg.location.href;
+                    bg[bi].r = bh.referrer;
+                    bg[bi].k = bg.screen.colorDepth;
+                    bg[bi].n = bh.characterSet;
+                    bg[bi].o = (new Date).getTimezoneOffset();
+                    if (bg.dataLayer)
+                        for (const bt of Object.entries(Object.entries(dataLayer).reduce(((bu, bv) => ({ ...bu[1],
+                                ...bv[1]
+                            })), {}))) zaraz.set(bt[0], bt[1], {
+                            scope: "page"
+                        });
+                    bg[bi].q = [];
+                    for (; bg.zaraz.q.length;) {
+                        const bw = bg.zaraz.q.shift();
+                        bg[bi].q.push(bw)
+                    }
+                    bo.defer = !0;
+                    for (const bx of [localStorage, sessionStorage]) Object.keys(bx || {}).filter((bz => bz.startsWith("_zaraz_"))).forEach((by => {
+                        try {
+                            bg[bi]["z_" + by.slice(7)] = JSON.parse(bx.getItem(by))
+                        } catch {
+                            bg[bi]["z_" + by.slice(7)] = bx.getItem(by)
+                        }
+                    }));
+                    bo.referrerPolicy = "origin";
+                    bo.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(bg[bi])));
+                    bn.parentNode.insertBefore(bo, bn)
+                };
+                ["complete", "interactive"].includes(bh.readyState) ? zaraz.init() : bg.addEventListener("DOMContentLoaded", zaraz.init)
+            }(w, d, "zarazData", "script");
+        })(window, document);
+    </script>
+</head>
+
+<body data-spy="scroll" data-target=".mainmenu-area">
+
+    
+
+    <nav class="mainmenu-area" data-spy="affix" data-offset-top="200">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary_menu">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+                <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="primary_menu">
+                <ul class="nav navbar-nav mainmenu">
+                    <li class="active"><a href="#home_page">Home</a></li>
+                    <li><a href="#about_page">About</a></li>
+                    <li><a href="#features_page">Features</a></li>
+                    <li><a href="#gallery_page">Gallery</a></li>
+                    <li><a href="#price_page">Pricing</a></li>
+                    <li><a href="#contact_page">Contacts</a></li>
+                </ul>
+                <div class="right-button hidden-xs">
+                    <a href="#">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="home-area overlay" id="home_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 hidden-sm col-md-5">
+                    <figure class="mobile-image wow fadeInUp" data-wow-delay="0.2s">
+                        <img src="images/header-mobile.png" alt>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-md-7">
+                    <div class="space-80 hidden-xs"></div>
+                    <h1 class="wow fadeInUp" data-wow-delay="0.4s">Start your amazing stuff through appy.</h1>
+                    <div class="space-20"></div>
+                    <div class="desc wow fadeInUp" data-wow-delay="0.6s">
+                        <p>Experience the incredible capabilities of our AI-powered assistant through the user-friendly Appy app. Streamline tasks, gain insights, and enjoy seamless interactions for enhanced productivity and convenience.</p>
+                    </div>
+                    <div class="space-20"></div>
+                    <a href="#" class="bttn-white wow fadeInUp" data-wow-delay="0.8s"><i class="lnr lnr-download"></i>Download App</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="section-padding" id="about_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                    <div class="page-title text-center">
+                        <img src="images/about-logo.png" alt="About Logo">
+                        <div class="space-20"></div>
+                        <h5 class="title">About Appy</h5>
+                        <div class="space-30"></div>
+                        <h3 class="blue-color">A beautiful app for consectetur adipisicing elit, sed do eiusmod tempor incididunt ut mollit anim id est laborum. Sedut perspiciatis unde omnis. </h3>
+                        <div class="space-20"></div>
+                        <p>Unlock elegance in simplicity with an app that transcends Lorem Ipsum. Discover beauty in the details – where form meets function.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="progress-area gray-bg" id="progress_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="page-title section-padding">
+                        <h5 class="title wow fadeInUp" data-wow-delay="0.2s">Our Progress</h5>
+                        <div class="space-10"></div>
+                        <h3 class="dark-color wow fadeInUp" data-wow-delay="0.4s">Great Application Ever</h3>
+                        <div class="space-20"></div>
+                        <div class="desc wow fadeInUp" data-wow-delay="0.6s">
+                            <p>Experience sheer greatness in every tap with this exceptional app. Seamlessly blending innovation and usability, it's your gateway to a world of endless possibilities. Discover greatness today!</p>
+                        </div>
+                        <div class="space-50"></div>
+                        <a href="#" class="bttn-default wow fadeInUp" data-wow-delay="0.8s">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <figure class="mobile-image">
+                        <img src="images/progress-phone.png" alt>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="video-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="video-photo">
+                        <img src="images/video-image.jpg" alt>
+                        <a href="https://www.youtube.com/watch?v=ScrDhTsX0EQ" class="popup video-button">
+<img src="images/play-button.png" alt>
+</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-5 col-md-offset-1">
+                    <div class="space-60 hidden visible-xs"></div>
+                    <div class="page-title">
+                        <h5 class="title wow fadeInUp" data-wow-delay="0.2s">VIDEO FEATURES</h5>
+                        <div class="space-10"></div>
+                        <h3 class="dark-color wow fadeInUp" data-wow-delay="0.4s">Great Application Ever</h3>
+                        <div class="space-20"></div>
+                        <div class="desc wow fadeInUp" data-wow-delay="0.6s">
+                            <p>Unleash the epitome of excellence in this unparalleled app. Elevating your digital experience with breathtaking features, it's the pinnacle of innovation. Welcome to the greatest application ever created!.</p>
+                        </div>
+                        <div class="space-50"></div>
+                        <a href="#" class="bttn-default wow fadeInUp" data-wow-delay="0.8s">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="feature-area section-padding-top" id="features_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <div class="page-title text-center">
+                        <h5 class="title">Features</h5>
+                        <div class="space-10"></div>
+                        <h3>Powerful Features As Always</h3>
+                        <div class="space-60"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="box-icon">
+                            <i class="lnr lnr-rocket"></i>
+                        </div>
+                        <h4>Fast &amp; Powerful</h4>
+                        <p>Swift, potent, and unstoppable – the epitome of efficiency.</p>
+                    </div>
+                    <div class="space-60"></div>
+                    <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="box-icon">
+                            <i class="lnr lnr-paperclip"></i>
+                        </div>
+                        <h4>Easily Editable</h4>
+                        <p>Simplify your editing tasks with effortless ease.</p>
+                    </div>
+                    <div class="space-60"></div>
+                    <div class="service-box wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="box-icon">
+                            <i class="lnr lnr-cloud-download"></i>
+                        </div>
+                        <h4>Cloud Storage</h4>
+                        <p>Seamless, secure, and accessible – your data, always in the cloud.</p>
+                    </div>
+                    <div class="space-60"></div>
+                </div>
+                <div class="hidden-xs hidden-sm col-md-4">
+                    <figure class="mobile-image">
+                        <img src="images/feature-image.png" alt="Feature Photo">
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="box-icon">
+                            <i class="lnr lnr-clock"></i>
+                        </div>
+                        <h4>Easy Notifications</h4>
+                        <p>Stay informed effortlessly with user-friendly notifications.</p>
+                    </div>
+                    <div class="space-60"></div>
+                    <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="box-icon">
+                            <i class="lnr lnr-laptop-phone"></i>
+                        </div>
+                        <h4>Fully Responsive</h4>
+                        <p>Adapts flawlessly to any screen – fully responsive design.</p>
+                    </div>
+                    <div class="space-60"></div>
+                    <div class="service-box wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="box-icon">
+                            <i class="lnr lnr-cog"></i>
+                        </div>
+                        <h4>Editable Layout</h4>
+                        <p>Tailor your layout with ease – fully editable for your needs.</p>
+                    </div>
+                    <div class="space-60"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="testimonial-area" id="testimonial_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="page-title text-center">
+                        <h5 class="title">Testimonials</h5>
+                        <h3 class="dark-color">Our Client Loves US</h3>
+                        <div class="space-60"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="team-slide">
+                        <div class="team-box">
+                            <div class="team-image">
+                                <img src="images/team-1.png" alt>
+                            </div>
+                            <h4>Ashekur Rahman</h4>
+                            <h6 class="position">Art Dirrector</h6>
+                            <p>A game-changer! Appy revolutionized my digital experience. Seamless, efficient, and brilliant. A must-have for anyone looking to boost productivity and convenience.</p>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-image">
+                                <img src="images/team-4.jpg" alt>
+                            </div>
+                            <h4>Huzaifa Khan</h4>
+                            <h6 class="position">Business development</h6>
+                            <p>Incredible app! Appy has transformed how I work and manage tasks. User-friendly, efficient, and indispensable. It's the secret to my productivity and success!.</p>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-image">
+                                <img src="images/team-5.jpeg" alt style="width: 120px !important;">
+                            </div>
+                            <h4>Rahman Khan</h4>
+                            <h6 class="position">Business man</h6>
+                            <p>The virtuoso of Appy, orchestrated a digital symphony that brought my vision to life. His client reviews are a testament to his artistic mastery, dreams into reality.</p>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-image">
+                                <img src="images/team-6.jpeg" alt>
+                            </div>
+                            <h4>Ahsan</h4>
+                            <h6 class="position">App Development</h6>
+                            <p>The virtuoso of Appy, masterfully weaved my ideas into a digital masterpiece. His client reviews shine as beacons of his creative brilliance, turning into captivating digital reality.</p>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-image">
+                                <img src="images/team-7.jpg" alt>
+                            </div>
+                            <h4>Arzoo</h4>
+                            <h6 class="position">Business Development</h6>
+                            <p>The enchantress of Appy, conjured pure digital magic from my ideas. Her client reviews are the whispers of her creative prowess, crafting dreams into captivating, spellbinding digital realms.</p>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-image">
+                                <img src="images/team-8.jpg" alt>
+                            </div>
+                            <h4>Haneul</h4>
+                            <h6 class="position">Business Development</h6>
+                            <p>The celestial maestro of Appy, painted my vision across the digital finesse. Her client reviews are a testament to her divine creativity, turning aspirations digital constellations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="gallery-area section-padding" id="gallery_page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 gallery-slider">
+                    <div class="gallery-slide">
+                        <div class="item"><img src="images/gallery-1.jpg" alt></div>
+                        <div class="item"><img src="images/gallery-2.jpg" alt></div>
+                        <div class="item"><img src="images/gallery-3.jpg" alt></div>
+                        <div class="item"><img src="images/gallery-4.jpg" alt></div>
+                        <div class="item"><img src="images/gallery-1.jpg" alt></div>
+                        <div class="item"><img src="images/gallery-2.jpg" alt></div>
+                        <div class="item"><img src="images/gallery-3.jpg" alt></div>
+                        <div class="item"><img src="images/gallery-1.jpg" alt></div>
+                        <div class="item"><img src="images/gallery-2.jpg" alt></div>
+                        <div class="item"><img src="images/gallery-3.jpg" alt></div>
+                        <div class="item"><img src="images/gallery-4.jpg" alt></div>
+                        <div class="item"><img src="images/gallery-1.jpg" alt></div>
+                        <div class="item"><img src="images/gallery-2.jpg" alt></div>
+                        <div class="item"><img src="images/gallery-3.jpg" alt></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-5 col-lg-3">
+                    <div class="page-title">
+                        <h5 class="white-color title wow fadeInUp" data-wow-delay="0.2s">Screenshots</h5>
+                        <div class="space-10"></div>
+                        <h3 class="white-color wow fadeInUp" data-wow-delay="0.4s">Screenshot 01</h3>
+                    </div>
+                    <div class="space-20"></div>
+                    <div class="desc wow fadeInUp" data-wow-delay="0.6s">
+                        <p>A digital snapshot frozen in time, capturing memories and moments with pixel-perfect precision, where memories come to life in vivid pixels and vibrant hues.</p>
+                    </div>
+                    <div class="space-50"></div>
+                    <a href="#" class="bttn-default wow fadeInUp" data-wow-delay="0.8s">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="page-title">
+                        <h5 class="title wow fadeInUp" data-wow-delay="0.2s">Our features</h5>
+                        <div class="space-10"></div>
+                        <h3 class="dark-color wow fadeInUp" data-wow-delay="0.4s">Aour Approach of Design is Prety Simple and Clear</h3>
+                    </div>
+                    <div class="space-20"></div>
+                    <div class="desc wow fadeInUp" data-wow-delay="0.6s">
+                        <p>Our design approach: Simplify complexity, illuminate clarity. We craft simplicity into every pixel, making your vision shine through. It's design distilled to its purest essence, beautifully uncomplicated and unmistakably effective.</p>
+                    </div>
+                    <div class="space-50"></div>
+                    <a href="#" class="bttn-default wow fadeInUp" data-wow-delay="0.8s">Learn More</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1">
+                    <div class="space-60 hidden visible-xs"></div>
+                    <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="box-icon">
+                            <i class="lnr lnr-clock"></i>
+                        </div>
+                        <h4>Easy Notifications</h4>
+                        <p>Streamlined alerts, effortlessly delivered – Easy Notifications, your communication solution.</p>
+                    </div>
+                    <div class="space-50"></div>
+                    <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="box-icon">
+                            <i class="lnr lnr-laptop-phone"></i>
+                        </div>
+                        <h4>Fully Responsive</h4>
+                        <p>Adapts flawlessly, every screen a canvas – Fully Responsive design.</p>
+                    </div>
+                    <div class="space-50"></div>
+                    <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="box-icon">
+                            <i class="lnr lnr-cog"></i>
+                        </div>
+                        <h4>Editable Layout</h4>
+                        <p>Empower your creativity with ease – Editable Layout, design without limits.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="download-area overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 hidden-sm">
+                    <figure class="mobile-image">
+                        <img src="images/download-image.png" alt>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-md-6 section-padding">
+                    <h3 class="white-color">Download The App</h3>
+                    <div class="space-20"></div>
+                    <p>Experience a world of convenience and innovation – Download The App today and embark on a journey of endless possibilities.</p>
+                    <div class="space-60"></div>
+                    <a href="#" class="bttn-white sq"><img src="images/apple-icon.png" alt="apple icon"> Apple Store</a>
+                    <a href="#" class="bttn-white sq"><img src="images/play-store-icon.png" alt="Play Store Icon"> Play Store</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="section-padding price-area" id="price_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="page-title text-center">
+                        <h5 class="title">Pricing Plan</h5>
+                        <h3 class="dark-color">Our Awesome Pricing Plan</h3>
+                        <div class="space-60"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="price-box">
+                        <div class="price-header">
+                            <div class="price-icon">
+                                <span class="lnr lnr-rocket"></span>
+                            </div>
+                            <h4 class="upper">Free</h4>
+                        </div>
+                        <div class="price-body">
+                            <ul>
+                                <li>Easy Installations</li>
+                                <li>Unlimited support</li>
+                                <li>Uniqe Elements</li>
+                            </ul>
+                        </div>
+                        <div class="price-rate">
+                            <sup>&#36;</sup> <span class="rate">0</span> <small>/Month</small>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#" class="bttn-white">Purchase</a>
+                        </div>
+                    </div>
+                    <div class="space-30 hidden visible-xs"></div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="price-box">
+                        <div class="price-header">
+                            <div class="price-icon">
+                                <span class="lnr lnr-diamond"></span>
+                            </div>
+                            <h4 class="upper">Medium</h4>
+                        </div>
+                        <div class="price-body">
+                            <ul>
+                                <li>Easy Installations</li>
+                                <li>Unlimited support</li>
+                                <li>Free Forever</li>
+                            </ul>
+                        </div>
+                        <div class="price-rate">
+                            <sup>&#36;</sup> <span class="rate">49</span> <small>/Month</small>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#" class="bttn-white">Purchase</a>
+                        </div>
+                    </div>
+                    <div class="space-30 hidden visible-xs"></div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="price-box">
+                        <div class="price-header">
+                            <div class="price-icon">
+                                <span class="lnr lnr-pie-chart"></span>
+                            </div>
+                            <h4 class="upper">Business</h4>
+                        </div>
+                        <div class="price-body">
+                            <ul>
+                                <li>Easy Installations</li>
+                                <li>Unlimited support</li>
+                                <li>Free Forever</li>
+                            </ul>
+                        </div>
+                        <div class="price-rate">
+                            <sup>&#36;</sup> <span class="rate">99</span> <small>/Month</small>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#" class="bttn-white">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 
+    <section id="questions_page" class="questions-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="page-title text-center">
+                        <h5 class="title">FAQ</h5>
+                        <h3 class="dark-color">Frequently Asked Questions</h3>
+                        <div class="space-60"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="toggole-boxs">
+                        <h3>Faq first question goes here? </h3>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <h3>About freewuent question goes here? </h3>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <h3>Why more question goes here? </h3>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <h3>What question goes here? </h3>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="space-20 hidden visible-xs"></div>
+                    <div class="toggole-boxs">
+                        <h3>Faq second question goes here? </h3>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <h3>Third faq question goes here? </h3>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <h3>Why more question goes here? </h3>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <h3>Seventh frequent question here? </h3>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <div class="subscribe-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <div class="subscribe-form text-center">
+                        <h3 class="blue-color">Subscribe for More Features</h3>
+                        <div class="space-20"></div>
+                        <form id="mc-form">
+                            <input type="email" class="control" placeholder="Enter your email" required="required" id="mc-email">
+                            <button class="bttn-white active" type="submit"><span class="lnr lnr-location"></span> Subscribe</button>
+                            <label class="mt10" for="mc-email"></label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer-area" id="contact_page">
+        <div class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-title text-center">
+                            <h5 class="title">Contact US</h5>
+                            <h3 class="dark-color">Find Us By Bellow Details</h3>
+                            <div class="space-60"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="footer-box">
+                            <div class="box-icon">
+                                <span class="lnr lnr-map-marker"></span>
+                            </div>
+                            <p>8-54 Paya Lebar Square <br/> 60 Paya Lebar Roa SG, Singapore</p>
+                        </div>
+                        <div class="space-30 hidden visible-xs"></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="footer-box">
+                            <div class="box-icon">
+                                <span class="lnr lnr-phone-handset"></span>
+                            </div>
+                            <p>+44 7771032906 <br/> +99 5571780197</p>
+                        </div>
+                        <div class="space-30 hidden visible-xs"></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="footer-box">
+                            <div class="box-icon">
+                                <span class="lnr lnr-envelope"></span>
+                            </div>
+                            <p>
+                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b6cfd9c3c4dbd7dfdaf6d1dbd7dfda98d5d9db">fihoge8102@horsgit.com</a> 
+                                <br/> 
+                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b2d0d3d1d9c2dbc2d7c09cd1dddff2d5dfd3dbde9cd1dddf">tyfsoge5302@hqsrsgit.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12">
+
+                        <span style="text-align: center; margin: auto; display: block; font-weight: 600;">Copyright © 2023 Appy Team's. All rights reserved.</span>
+
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/vendor/jquery-ui.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/contact-form.js"></script>
+    <script src="js/ajaxchimp.js"></script>
+    <script src="js/scrollUp.min.js"></script>
+    <script src="js/magnific-popup.min.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon='{"rayId":"802cb223dace8a9f","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.8.0","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
