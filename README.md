@@ -2,9 +2,7 @@
 
 Appy Website Clone Design For HTML, CSS, JAVASCRIPT
 
-
-# View My Website: https://fahadmemon1234.github.io/Appy_Website/
-
+View My Website: https://fahadmemon1234.github.io/Appy_Website/
 
 ![1](https://github.com/fahadmemon1234/Appy_Website/assets/110020126/ca1b9713-5986-42f1-9d99-26f1eef8fd8d)
 
